@@ -1,0 +1,25 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: lzr
+    password: 123
+    virtual-host: /lzr
+    listener:
+      simple:
+        retry:
+          enabled: false
+        acknowledge-mode: manual
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+  datasource:
+      url: jdbc:mysql://localhost:3306/seekill?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+      host: 127.0.0.1
+      port: 6379
